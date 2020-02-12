@@ -91,4 +91,9 @@ def checkout(cart, coupons)
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
   # binding.pry
+  new_cart = consolidate_cart(cart)
+  new_discounted_cart1 = apply_coupons(new_cart, coupons)
+  new_discounted_cart2 = apply_clearance(new_discounted_cart1)
+
+
 end
